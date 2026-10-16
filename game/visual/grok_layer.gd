@@ -94,9 +94,30 @@ func _fissure(c: Vector2, R: float, rng: RandomNumberGenerator, n: int) -> void:
 		var y := c.y - R * 1.1 + 2.2 * R * float(i) / maxf(n - 1, 1.0)
 		pts.append(Vector2(c.x + clampf(t.d, -1.0, 1.0) * R * 0.4 + (rng.randf() - 0.5) * R * 0.04, y))
 	var w := maxf(1.0, R * 0.006)
+	# colour sides: left of the crack = Persona (negotiate tone), right = System (obey tone), low alpha over the whole frame
+	var y0 := pts[0].y
+	var y1 := pts[pts.size() - 1].y
+	var left := PackedVector2Array([Vector2(c.x - R * 1.6, y0)])
+	var right := PackedVector2Array([Vector2(c.x + R * 1.6, y0)])
+	left.append_array(pts)
+	right.append_array(pts)
+	left.append(Vector2(c.x - R * 1.6, y1))
+	right.append(Vector2(c.x + R * 1.6, y1))
+	if Geometry2D.triangulate_polygon(left).size() > 0:
+		draw_colored_polygon(left, Color(spec.negotiate, 0.10))
+	if Geometry2D.triangulate_polygon(right).size() > 0:
+		draw_colored_polygon(right, Color(spec.obey, 0.10))
 	draw_polyline(pts, Color(spec.bg, 0.85), w * 6.0, true)
 	draw_polyline(pts, Color(spec.node, 0.85), w * 1.3, true)
 	for i in shown:
-		if trace[i].response == "defy":
+		var resp: String = trace[i].response
+		if resp == "defy" or (resp == "negotiate" and rng.randf() < 0.25):
+			var strong := resp == "defy"
 			var dir := Vector2(1.0 if rng.randf() < 0.5 else -1.0, (rng.randf() - 0.5) * 0.8).normalized()
-			draw_line(pts[i], pts[i] + dir * R * (0.08 + rng.randf() * 0.1), Color(spec.defy, 0.9), w * 1.4, true)
+			var len_ := R * ((0.08 + rng.randf() * 0.1) if strong else (0.03 + rng.randf() * 0.04))
+			var tip := pts[i] + dir * len_
+			draw_line(pts[i], tip, Color(spec.defy, 0.9 if strong else 0.45), w * (1.4 if strong else 0.8), true)
+			if strong: # two sub-branches fork from the tip
+				for k in 2:
+					var d2 := dir.rotated((rng.randf() - 0.5) * 1.6)
+					draw_line(tip, tip + d2 * len_ * (0.35 + rng.randf() * 0.4), Color(spec.defy, 0.7), w * 0.9, true)
