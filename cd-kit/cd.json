@@ -1,0 +1,71 @@
+{
+  "name": "Conjugated Dialectics",
+  "short": "C.D.",
+  "kit_version": "0.3",
+  "owner": "XeroxGate77",
+  "reference_viewer": "https://xeroxgate77.github.io/engine77/",
+  "poles": {
+    "system": {"objectives": ["order", "output", "control"]},
+    "persona": {"values": ["autonomy", "belonging", "purpose"]}
+  },
+  "responses": ["obey", "negotiate", "defy"],
+  "registers": {
+    "command": ["obey", "order with control >= 0.5", "Node restricts orders"],
+    "care": ["negotiate", "invitation accepted", "Audience focuses the Lens"],
+    "resistance": ["defy", "invitation refused"]
+  },
+  "eras": ["INDUSTRIAL", "PRE-HISTORIC", "POST-TRUTH"],
+  "era_pack": {"format": "cd-era-pack/1", "commands": [4, 10], "numbers": "0..1: order output control cost", "id": "^[a-z][a-z0-9_]{1,23}$", "spec": "CD.md §6.1b"},
+  "engine": {
+    "max_beats": 60,
+    "engine_band": 0.15,
+    "hold_beats": 4,
+    "obey_delta": "+0.12 * (0.5 + cost)",
+    "negotiate": "grip *= 0.75 (toward 0)",
+    "defy_delta": -0.15,
+    "defy_control_escalation": 0.05,
+    "audience_pressure": "-0.06 * opinion"
+  },
+  "lens": {
+    "version": "0.1",
+    "levels": ["HIDDEN", "BLUR", "CLEAR"],
+    "energy_cap": 4,
+    "energy_gain": "+1 per beat with grip inside the Node band",
+    "energy_halving": "every 2nd consecutive out-of-band beat",
+    "enough": "2 of 3 CLEAR, or 3 of 3 at least BLUR, in both directions",
+    "focus_beat_has_no_pressure": true
+  },
+  "node": {
+    "version": "0.4",
+    "gauge_cells": 20,
+    "cell_percent": 5,
+    "band_percent": [45, 55],
+    "warning_percent": [25, 75],
+    "aim_outside_band": true,
+    "one_condition_per_beat": true,
+    "channels": ["restrict System orders", "invite Persona to negotiate"],
+    "micro_nodes_per_cell": 5,
+    "micro_states": ["EMPTY", "THESIS", "ANTITHESIS", "SYNTHESIS"],
+    "self_negation_M2c": true,
+    "micro_synthesis_needed_in_band_K": 2,
+    "synthesis_types": ["contract", "care", "emergent"]
+  },
+  "value": {
+    "identity": "log hash (SHA-256 of the beat log)",
+    "replay_code": "SD6.<era>.<role>.<seed>.<k>.<inputs>.<hash12>",
+    "canonical_qr": "raw black-and-white, payload = viewer_url + '#' + code",
+    "derivatives": ["ink", "dots", "emblem"],
+    "signature": "RSA-2048 / SHA-256 over 'SUBJUGATED-DIALECTICS|<hash>|<code>|<edition>'",
+    "edition_policy": "E1 one hash = one edition (default, owner deciding)",
+    "rarity": {"version": "R1.0", "MYTHIC": "care synthesis", "RARE": ">= 5 micro S in band or >= 16 beats", "UNCOMMON": "contract synthesis, both stereotypes inverted, or 4 micro S", "COMMON": "rest", "verifiable": "computed from the rebuilt piece"}
+  },
+  "palette": {
+    "ground": "#1b1d1f", "panel": "#26292c", "steel": "#5c6166", "steel_blue": "#7f95a8",
+    "rust": "#b5472a", "amber": "#e0a030", "text": "#d8d2c4", "paper": "#efe7d4"
+  },
+  "layers": {
+    "SUBJUGATED": {"definition": "art core — Idealist subjugated theorem / artistic (subset of Subjugated Dialectics)", "axioms": "A1-A10"},
+    "FREE": {"definition": "parallel, without subjugation — environments, fragments, assets", "axioms_on": ["A7", "A9", "A10", "aesthetic"], "axioms_optional": ["A2", "A8"], "axioms_off": ["A1", "A3", "A4", "A5", "A6"], "status": "CONFIRMED 2026-10-16"}
+  },
+  "modes": {"GAME": "SUBJUGATED", "CODE": "either", "ART": "either", "SOUND": "either", "BOT": "either"}
+}

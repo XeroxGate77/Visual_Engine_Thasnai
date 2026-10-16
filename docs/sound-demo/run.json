@@ -1,0 +1,201 @@
+{
+  "beats": [
+    {
+      "beat": 1,
+      "cell": 10,
+      "cmd": "RAISE THE QUOTA",
+      "grip": 0.0078812563419342,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": -0.13135427236557,
+      "response": "negotiate"
+    },
+    {
+      "beat": 2,
+      "cell": 10,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": 0.0137921985983849,
+      "lens": "lens=system:order:1",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": -0.13135427236557,
+      "response": "negotiate"
+    },
+    {
+      "beat": 3,
+      "cell": 11,
+      "cmd": "RAISE THE QUOTA",
+      "grip": 0.141673454940319,
+      "lens": "lens=persona:autonomy:1",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": -0.13135427236557,
+      "response": "obey"
+    },
+    {
+      "beat": 4,
+      "cell": 12,
+      "cmd": "RAISE THE QUOTA",
+      "grip": 0.26556560754776,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:0,1,2|aim",
+      "opinion": -0.0648692101240158,
+      "response": "obey"
+    },
+    {
+      "beat": 5,
+      "cell": 12,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": 0.207140627503395,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:0,1,2|aim",
+      "opinion": -0.132773697376251,
+      "response": "negotiate"
+    },
+    {
+      "beat": 6,
+      "cell": 11,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": 0.165047735720873,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:0,1,2|aim",
+      "opinion": -0.161537751555443,
+      "response": "negotiate"
+    },
+    {
+      "beat": 7,
+      "cell": 11,
+      "cmd": "RAISE THE QUOTA",
+      "grip": 0.130018495582044,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:0,1,2|aim",
+      "opinion": -0.103878229856491,
+      "response": "negotiate"
+    },
+    {
+      "beat": 8,
+      "cell": 10,
+      "cmd": "RAISE THE QUOTA",
+      "grip": 0.0929414161015302,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:0,1,2|aim",
+      "opinion": 0.0762075930833817,
+      "response": "negotiate"
+    },
+    {
+      "beat": 9,
+      "cell": 9,
+      "cmd": "RAISE THE QUOTA",
+      "grip": -0.0616310394834727,
+      "lens": "lens=system:output:1",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": 0.0762075930833817,
+      "response": "defy"
+    },
+    {
+      "beat": 10,
+      "cell": 9,
+      "cmd": "RAISE THE QUOTA",
+      "grip": -0.0507957351976074,
+      "lens": "lens=persona:belonging:1",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": 0.0762075930833817,
+      "response": "negotiate"
+    },
+    {
+      "beat": 11,
+      "cell": 7,
+      "cmd": "RAISE THE QUOTA",
+      "grip": -0.20536819078261,
+      "lens": "lens=system:control:1",
+      "micro_s_band": 0,
+      "node": "",
+      "opinion": 0.0762075930833817,
+      "response": "defy"
+    },
+    {
+      "beat": 12,
+      "cell": 8,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.153195937259006,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:2,3|aim",
+      "opinion": -0.0138367637991905,
+      "response": "negotiate"
+    },
+    {
+      "beat": 13,
+      "cell": 8,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.109601232098794,
+      "lens": "",
+      "micro_s_band": 0,
+      "node": "node=sys:1,2|aim",
+      "opinion": -0.0882620140910149,
+      "response": "negotiate"
+    },
+    {
+      "beat": 14,
+      "cell": 9,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.0697158128673254,
+      "lens": "",
+      "micro_s_band": 2,
+      "node": "node=sys:0,1,2,3|aim",
+      "opinion": -0.208085186779499,
+      "response": "negotiate"
+    },
+    {
+      "beat": 15,
+      "cell": 9,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.0398017484437241,
+      "lens": "lens=persona:purpose:1",
+      "micro_s_band": 3,
+      "node": "",
+      "opinion": -0.208085186779499,
+      "response": "negotiate"
+    },
+    {
+      "beat": 16,
+      "cell": 9,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.0173662001260232,
+      "lens": "lens=system:order:2",
+      "micro_s_band": 4,
+      "node": "",
+      "opinion": -0.208085186779499,
+      "response": "negotiate"
+    },
+    {
+      "beat": 17,
+      "cell": 9,
+      "cmd": "INSTALL THE FOREMAN'S EYE",
+      "grip": -0.000539538887747429,
+      "lens": "lens=persona:autonomy:2",
+      "micro_s_band": 5,
+      "node": "",
+      "opinion": -0.208085186779499,
+      "response": "negotiate"
+    }
+  ],
+  "code": "SD6.industrial.p.35.0..600f5c01270a",
+  "era": "industrial",
+  "hash": "600f5c01270a19a8f51746059334f1d83fa4de12e25049504c92abd64f910bbf",
+  "micro": ".....|.....|.....|.....|.....|.....|.....|T....|TT...|SSSSS|TTT..|SSA..|AA...|.....|.....|.....|.....|.....|.....|.....",
+  "rarity": {
+    "reason": "deep synthesis (5 micro S)",
+    "tier": "RARE"
+  },
+  "seed": 35,
+  "synthesis_type": "contract"
+}

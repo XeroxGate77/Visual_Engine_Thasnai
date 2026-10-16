@@ -1,0 +1,12 @@
+# generated / large
+build/
+game/.godot/
+game/tests/shots*/
+game/tests/_out/
+.DS_Store
+# deploy/sd is the owner's own repo (engine77): never nested here
+deploy/
+# secrets never belong in the project
+*.key
+*_private*.pem
+.env*

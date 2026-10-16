@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philosophy Map</title>
+<style>
+:root{--bg:#f4f1ea;--panel:#ffffff;--ink:#1f1d1a;--muted:#6b665d;--line:#8a857b;--amber:#b77a12;--rust:#a1402a;--steel:#4f6476;--node:#e9e4d8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1d1f;--panel:#232629;--ink:#e2dccd;--muted:#8d9399;--line:#5c6166;--amber:#e0a030;--rust:#c8573c;--steel:#8aa0b3;--node:#2b2f33}}
+:root[data-theme="dark"]{--bg:#1b1d1f;--panel:#232629;--ink:#e2dccd;--muted:#8d9399;--line:#5c6166;--amber:#e0a030;--rust:#c8573c;--steel:#8aa0b3;--node:#2b2f33}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"Segoe UI","Noto Sans Thai",sans-serif}
+main{max-width:1180px;margin:0 auto;padding:28px 16px 48px}
+h1{margin:0;font-size:28px;letter-spacing:.06em;color:var(--amber)}
+.sub{color:var(--muted);margin:4px 0 18px}
+.pillars{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{border:1.5px solid var(--line);border-radius:3px;padding:4px 10px;font-size:13px;background:var(--panel)}
+.chip b{color:var(--amber)}
+.map{background:var(--panel);border:1.5px solid var(--line);border-radius:4px;padding:8px}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--ink);font-family:inherit}
+.box{fill:var(--node);stroke:var(--line);stroke-width:2}
+.t{font-size:20px;font-weight:700;letter-spacing:.05em}
+.s{font-size:13px;fill:var(--muted)}
+.edge{stroke:var(--line);stroke-width:2;fill:none}
+.lbl{font-size:13px;font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:14px 0 0;color:var(--muted);font-size:13px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+h2{font-size:18px;margin:30px 0 10px;letter-spacing:.04em}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1.5px solid var(--line);font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+code{font-size:12.5px}
+.st{white-space:nowrap;font-weight:600;font-size:12px}
+.dec{color:var(--steel)}.int{color:var(--amber)}.open{color:var(--rust)}
+ul{margin:6px 0 0 18px;padding:0}
+</style>
+</head>
+<body>
+<main>
+  <h1>SUBJUGATED DIALECTICS</h1>
+  <p class="sub">แผนที่แกนปรัชญา (Draft 0) — วาดจากสิ่งที่ตัดสินแล้วในโปรเจกต์ และเชื่อมกับ engine ที่ล็อกไว้</p>
+  <div class="pillars">
+    <span class="chip"><b>Automatic</b> — ระบบเดินเองด้วย seed</span>
+    <span class="chip"><b>Aesthetical</b> — ลวดลายการปะทะกลายเป็นงานอาร์ต</span>
+    <span class="chip"><b>Subjugatic</b> — ฝั่งหนึ่งถูกครอบงำเสมอ</span>
+    <span class="chip"><b>Dialected</b> — ปะทะ → สังเคราะห์ ไม่ใช่ชนะ/แพ้</span>
+  </div>
+
+  <div class="map">
+  <svg viewBox="0 0 1200 820" role="img" aria-label="Concept map: Era seeds System; System commands Persona; Persona obeys, negotiates or defies; Audience presses with opinion; all converge on the Balance Node; synthesis produces Insight, Output Dilemma and Art.">
+    <defs>
+      <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/>
+      </marker>
+      <marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--amber)"/>
+      </marker>
+    </defs>
+
+    <!-- edges -->
+    <path class="edge" d="M330 340 Q600 210 870 340" marker-end="url(#ar)"/>
+    <text class="lbl" x="586" y="258" text-anchor="end" style="fill:var(--rust)">COMMAND (quota · bell · eye · bonus)</text>
+    <path class="edge" d="M870 470 Q600 600 330 470" marker-end="url(#ar)"/>
+    <text class="lbl" x="600" y="566" text-anchor="middle" style="fill:var(--steel)">OBEY · NEGOTIATE · DEFY</text>
+    <path class="edge" d="M330 405 L484 405" marker-end="url(#ar)"/>
+    <path class="edge" d="M870 405 L716 405" marker-end="url(#ar)"/>
+    <text class="s" x="420" y="395" text-anchor="middle">grip +</text>
+    <text class="s" x="780" y="395" text-anchor="middle">grip −</text>
+    <path class="edge" d="M600 150 L600 289" marker-end="url(#ar)" stroke-dasharray="6 5"/>
+    <text class="lbl" x="612" y="240">public opinion</text>
+    <path class="edge" d="M600 521 L600 650" marker-end="url(#ar)"/>
+    <text class="lbl" x="612" y="625">synthesis / no synthesis</text>
+    <path class="edge" d="M200 170 L200 312" marker-end="url(#ar)"/>
+    <text class="s" x="212" y="250">seeds dilemmas</text>
+
+    <!-- ERA -->
+    <rect class="box" x="60" y="60" width="300" height="108" rx="4"/>
+    <text class="t" x="80" y="94">ERA</text>
+    <text class="s" x="80" y="120">INDUSTRIAL · PRE-HISTORIC · POST-TRUTH</text>
+    <text class="s" x="80" y="142">ฉากที่กำหนดว่า System สั่งอะไร</text>
+
+    <!-- AUDIENCE -->
+    <rect class="box" x="450" y="40" width="300" height="108" rx="4"/>
+    <text class="t" x="470" y="74">AUDIENCE</text>
+    <text class="s" x="470" y="100">คนดู — กดดันด้วยความเห็นสาธารณะ</text>
+    <text class="s" x="470" y="122">ได้รับ Insight ตอนจบ</text>
+
+    <!-- SYSTEM -->
+    <rect class="box" x="60" y="316" width="270" height="178" rx="4" style="stroke:var(--rust)"/>
+    <text class="t" x="80" y="352" style="fill:var(--rust)">SYSTEM</text>
+    <text class="s" x="80" y="378">systematic objectives</text>
+    <text class="s" x="80" y="404">order · output · control</text>
+    <text class="s" x="80" y="430">ถูกต่อต้าน → ยกระดับ control</text>
+    <text class="s" x="80" y="452" style="fill:var(--amber)">ค่อยๆ เห็นค่านิยมของ Persona</text>
+    <text class="s" x="80" y="476">ผู้เล่นคุมได้ (โหมด System)</text>
+
+    <!-- PERSONA -->
+    <rect class="box" x="870" y="316" width="270" height="178" rx="4" style="stroke:var(--steel)"/>
+    <text class="t" x="890" y="352" style="fill:var(--steel)">PERSONA</text>
+    <text class="s" x="890" y="378">ตัวตน = ค่านิยม</text>
+    <text class="s" x="890" y="404">autonomy · belonging · purpose</text>
+    <text class="s" x="890" y="430">เปลี่ยนตามสิ่งที่เลือกตอบ</text>
+    <text class="s" x="890" y="452" style="fill:var(--amber)">ค่อยๆ เห็นเป้าหมายจริงของ System</text>
+    <text class="s" x="890" y="476">ผู้เล่นคุมได้ (โหมด Persona)</text>
+
+    <!-- NODE GATE: two conditions, both required -->
+    <path d="M600 291 A114 114 0 0 0 600 519" fill="none" stroke="var(--steel)" stroke-width="5"/>
+    <path d="M600 291 A114 114 0 0 1 600 519" fill="none" stroke="var(--amber)" stroke-width="5" stroke-dasharray="10 6"/>
+    <text class="lbl" x="478" y="434" text-anchor="end" style="fill:var(--steel)">① grip สมดุล</text>
+    <text class="lbl" x="722" y="434" style="fill:var(--amber)">② เปิดเผยมากพอ</text>
+
+    <!-- BALANCE NODE -->
+    <circle cx="600" cy="405" r="92" fill="var(--node)" stroke="var(--amber)" stroke-width="3"/>
+    <circle cx="600" cy="405" r="34" fill="var(--amber)" opacity=".85"/>
+    <text class="t" x="600" y="358" text-anchor="middle" style="fill:var(--amber);font-size:14px">BALANCE NODE</text>
+    <text class="s" x="600" y="470" text-anchor="middle">|grip| &lt; 0.15</text>
+    <text class="s" x="600" y="488" text-anchor="middle">ค้าง 4 จังหวะ</text>
+
+    <!-- OUTPUT -->
+    <rect class="box" x="330" y="654" width="540" height="130" rx="4" style="stroke:var(--amber)"/>
+    <text class="t" x="350" y="688" style="fill:var(--amber)">OUTPUT → AUDIENCE</text>
+    <text class="s" x="350" y="716">INSIGHT — สิ่งที่การปะทะรอบนี้เปิดเผย</text>
+    <text class="s" x="350" y="738">OUTPUT DILEMMA — คำถามที่ยังไม่มีคำตอบ</text>
+    <text class="s" x="350" y="760">ART — วง procedural ฟรี · prompt ภาพ → Grok Imagine (บัญชีผู้เล่น)</text>
+  </svg>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--rust)"></span>ขั้วครอบงำ</span>
+    <span><span class="sw" style="background:var(--steel)"></span>ขั้วถูกครอบงำ</span>
+    <span><span class="sw" style="background:var(--amber)"></span>จุดสังเคราะห์และผลลัพธ์</span>
+    <span>เส้นประเทา = แรงกดดัน ไม่ใช่การควบคุมตรง</span>
+    <span>วงรอบ Node = <b>ประตูเงื่อนไขคู่</b>: ครึ่งซ้าย ① grip สมดุล + ครึ่งขวา ② เปิดเผยมากพอ — ต้องครบทั้งคู่จึงสังเคราะห์</span>
+  </div>
+  </div>
+
+  <h2>แต่ละแนวคิดอยู่ตรงไหนใน engine</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>แนวคิด</th><th>ใน engine</th><th>สถานะ</th></tr>
+    <tr><td>สามบทบาทของผู้เล่น (Audience / Persona / System)</td><td><code>main.gd</code> → <code>_on_role</code>, chooser ใน <code>dialectic_sim.gd</code></td><td class="st dec">ตัดสินแล้ว</td></tr>
+    <tr><td>กลไกปะทะ: คำสั่ง → ทำตาม / ต่อรอง / ฝ่าฝืน</td><td><code>dialectic_sim.gd</code> → <code>begin_beat</code> / <code>finish_beat</code></td><td class="st dec">ตัดสินแล้ว</td></tr>
+    <tr><td>Audience กดดันด้วยความเห็นสาธารณะ</td><td><code>opinion</code>, <code>audience_chooser</code></td><td class="st dec">ตัดสินแล้ว</td></tr>
+    <tr><td>Node แกนกลาง = จุดสมดุลของสองขั้ว</td><td><code>BALANCE_BAND = 0.15</code>, <code>BALANCE_HOLD = 4</code></td><td class="st dec">ตัดสินแล้ว · ตัวเลขยังไม่ได้ปรับ</td></tr>
+    <tr><td>ยุคเป็นตัวตั้ง dilemma ของ System</td><td><code>eras.gd</code></td><td class="st dec">ตัดสินแล้ว · ตัวเลขเป็น placeholder</td></tr>
+    <tr><td>Insight + Output Dilemma + Art ให้ Audience</td><td><code>insight.gd</code>, <code>image_prompt.gd</code>, <code>art_view.gd</code></td><td class="st dec">ตัดสินแล้ว</td></tr>
+    <tr><td>ความหมายของ 4 เสาหลักด้านบน</td><td>—</td><td class="st int">ผมตีความ · รอคุณแก้</td></tr>
+    <tr><td>Persona มีค่านิยม 3 แกน, System มีเป้า 3 แกน</td><td><code>persona</code>, <code>system_obj</code></td><td class="st int">ผมเลือกตอนสร้าง · รอคุณยืนยัน</td></tr>
+    <tr><td>Disclosure dialected: เปิดเผยเป้าหมาย System / ค่านิยม Persona ให้ขั้วตรงข้ามเท่านั้น ทีละน้อยระหว่างเล่น</td><td><code>lens/</code> — ชั้นใหม่ข้าง engine</td><td class="st dec">ตัดสินแล้ว (นิยาม)</td></tr>
+    <tr><td>Node = เงื่อนไขคู่: grip สมดุล <b>และ</b> เปิดเผยมากพอ</td><td><code>lens/lens_sim.gd</code> → <code>finish_beat</code> (L5.3)</td><td class="st dec">ตัดสินแล้ว · อยู่ในเกม</td></tr>
+    <tr><td>Node ออกเงื่อนไขล่วงหน้า (ผ่าน System + เชิญ Persona) · สกัดความเป็นเพศ (Command/Care/Resistance)</td><td><code>node/node_sim.gd</code>, <code>node/gender_reading.gd</code> (NODE-RULES v0.1)</td><td class="st dec">อนุมัติแล้ว · อยู่ในเกม</td></tr>
+    <tr><td>Lens: Audience เลือกเปิดเผย, พลังงานจากข้อจำกัดของ Node</td><td><code>lens/lens.gd</code> (LENS-RULES v0.1)</td><td class="st dec">อนุมัติแล้ว · อยู่ในเกม</td></tr>
+    <tr><td>"มากพอ" วัดอย่างไร · "อย่างอื่น" ที่ถูกเปิดเผย · Insight ควรเล่าสิ่งที่ถูกเปิดเผยให้ Audience ไหม · ผู้เล่นเห็นบนจอไหม</td><td>—</td><td class="st open">ยังเปิดอยู่</td></tr>
+    <tr><td>ทำไมสามยุคนี้ และยุคต่างกันในเชิงปรัชญาอย่างไร (ไม่ใช่แค่คำ)</td><td>ตอนนี้ต่างกันแค่ข้อความ ตัวเลขเหมือนกัน</td><td class="st open">ยังเปิดอยู่</td></tr>
+    <tr><td>ภาพ/เสียง (§5.4)</td><td>—</td><td class="st open">ยังเปิดอยู่</td></tr>
+  </table>
+  </div>
+</main>
+</body>
+</html>

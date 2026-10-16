@@ -1,0 +1,48 @@
+{
+  "format": "cd-era-pack/1",
+  "id": "prehistoric",
+  "author": "XeroxGate77",
+  "made_with": "built-in (sim/eras.gd)",
+  "era": {
+    "title": "PRE-HISTORIC",
+    "blurb": "Fire, hunt, taboo, the circle at night.",
+    "commands": [
+      {
+        "name": "DEMAND THE HUNT TRIBUTE",
+        "text": "Half the kill to the fire. The young go hungry first.",
+        "order": 0.3,
+        "output": 0.9,
+        "control": 0.3,
+        "cost": 0.5
+      },
+      {
+        "name": "ENFORCE THE FIRE TABOO",
+        "text": "No one tends the flame but the chosen. Cold is the price of order.",
+        "order": 0.9,
+        "output": 0.1,
+        "control": 0.5,
+        "cost": 0.6
+      },
+      {
+        "name": "NAME THE OUTCAST",
+        "text": "One voice is cut from the circle so the rest may sleep.",
+        "order": 0.5,
+        "output": 0.2,
+        "control": 0.9,
+        "cost": 0.8
+      },
+      {
+        "name": "SHARE THE FEAST",
+        "text": "Bellies full tonight. Tomorrow's debt is not spoken.",
+        "order": 0.2,
+        "output": 0.4,
+        "control": 0.1,
+        "cost": 0.1
+      }
+    ],
+    "closing": {
+      "synthesis": "The circle and the wanderer agreed on where the fire sits.",
+      "no_synthesis": "The fire burned on. The circle quietly split."
+    }
+  }
+}

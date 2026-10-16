@@ -1,0 +1,22 @@
+{
+  "format": "cd-era-pack/1",
+  "id": "orbital",
+  "author": "Claude (EXAMPLE / PROPOSAL — not approved by the owner)",
+  "made_with": "Claude via C.D. kit §6.1 GAME",
+  "era": {
+    "title": "ORBITAL",
+    "blurb": "Air quotas, hull shifts, the long dark outside.",
+    "commands": [
+      {"name": "RATION THE AIR", "text": "Breath is metered by output. The slow breathe less.", "order": 0.4, "output": 0.8, "control": 0.4, "cost": 0.7},
+      {"name": "SEAL THE RING", "text": "Bulkheads close at curfew. Each section alone with its fear.", "order": 0.9, "output": 0.2, "control": 0.6, "cost": 0.6},
+      {"name": "LOG EVERY HEARTBEAT", "text": "Biometrics on the public board. Calm is mandatory.", "order": 0.5, "output": 0.1, "control": 0.9, "cost": 0.8},
+      {"name": "ROTATE THE HULL CREW", "text": "Everyone takes the vacuum shift. Risk, fairly shared.", "order": 0.6, "output": 0.5, "control": 0.2, "cost": 0.3},
+      {"name": "PROMISE EARTH LEAVE", "text": "A seat home for the best workers. Nobody has seen one used.", "order": 0.1, "output": 0.6, "control": 0.1, "cost": 0.2}
+    ],
+    "closing": {
+      "synthesis": "The station and its crew agreed on how much air a life needs.",
+      "no_synthesis": "The station kept spinning. Nobody chose the orbit."
+    },
+    "image_scene": "a rotating space station ring, airlock lights, cold steel and amber warning lamps"
+  }
+}

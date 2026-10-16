@@ -1,0 +1,48 @@
+{
+  "format": "cd-era-pack/1",
+  "id": "industrial",
+  "author": "XeroxGate77",
+  "made_with": "built-in (sim/eras.gd)",
+  "era": {
+    "title": "INDUSTRIAL",
+    "blurb": "Furnaces, shift bells, the foreman's eye.",
+    "commands": [
+      {
+        "name": "RAISE THE QUOTA",
+        "text": "Output up by a fifth. The line is already hot.",
+        "order": 0.3,
+        "output": 0.9,
+        "control": 0.3,
+        "cost": 0.5
+      },
+      {
+        "name": "RING THE SHIFT BELL",
+        "text": "Bells at dawn, bells at dusk. Rest is a rented hour.",
+        "order": 0.9,
+        "output": 0.1,
+        "control": 0.5,
+        "cost": 0.6
+      },
+      {
+        "name": "INSTALL THE FOREMAN'S EYE",
+        "text": "Every bench watched. Trust becomes a line item.",
+        "order": 0.5,
+        "output": 0.2,
+        "control": 0.9,
+        "cost": 0.8
+      },
+      {
+        "name": "OFFER THE BONUS",
+        "text": "A coin for a faster hand. Who counts the missing fingers?",
+        "order": 0.2,
+        "output": 0.4,
+        "control": 0.1,
+        "cost": 0.1
+      }
+    ],
+    "closing": {
+      "synthesis": "The machine and the hand found a pace neither owns.",
+      "no_synthesis": "The line kept running. Nobody agreed to it."
+    }
+  }
+}

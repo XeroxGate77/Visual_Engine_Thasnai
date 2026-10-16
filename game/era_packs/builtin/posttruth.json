@@ -1,0 +1,48 @@
+{
+  "format": "cd-era-pack/1",
+  "id": "posttruth",
+  "author": "XeroxGate77",
+  "made_with": "built-in (sim/eras.gd)",
+  "era": {
+    "title": "POST-TRUTH",
+    "blurb": "Feeds, verdicts, the ranking of facts.",
+    "commands": [
+      {
+        "name": "PUBLISH THE APPROVED FACTS",
+        "text": "One account, repeated until it echoes as memory.",
+        "order": 0.3,
+        "output": 0.9,
+        "control": 0.3,
+        "cost": 0.5
+      },
+      {
+        "name": "BOOST THE LOYAL FEED",
+        "text": "What is agreed with rises. What is doubted sinks quietly.",
+        "order": 0.9,
+        "output": 0.1,
+        "control": 0.5,
+        "cost": 0.6
+      },
+      {
+        "name": "FLAG THE DISSENTERS",
+        "text": "A badge for the doubters. Visibility as a leash.",
+        "order": 0.5,
+        "output": 0.2,
+        "control": 0.9,
+        "cost": 0.8
+      },
+      {
+        "name": "GRANT VERIFIED STATUS",
+        "text": "Trust, sold at a discount to the compliant.",
+        "order": 0.2,
+        "output": 0.4,
+        "control": 0.1,
+        "cost": 0.1
+      }
+    ],
+    "closing": {
+      "synthesis": "A shared claim survived being questioned. Rare, and fragile.",
+      "no_synthesis": "Every side kept its facts. Nothing joined them."
+    }
+  }
+}
