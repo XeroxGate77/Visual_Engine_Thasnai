@@ -48,7 +48,7 @@ func _draw() -> void:
 
 # furnace light behind the Node: many soft concentric discs; stronger at synthesis
 func _glow(c: Vector2, R: float, p: float) -> void:
-	var power := (1.0 if synthesis else 0.35) * p
+	var power := (1.0 if synthesis else 0.75) * p # g1 edit: a run that never reached the Node still keeps a warm light
 	for k in 28:
 		var f := 1.0 - float(k) / 28.0
 		draw_circle(c, R * (0.10 + 0.034 * k), Color(spec.node, 0.045 * f * f * (0.3 + power)))
