@@ -70,15 +70,15 @@ func _embers(c: Vector2, R: float, rng: RandomNumberGenerator, p: float) -> void
 # palette-knife grain: short flat strokes, mostly tangential, in ground / rust / dim amber
 func _knife(c: Vector2, R: float, rng: RandomNumberGenerator) -> void:
 	var tones: Array[Color] = [Color("2a1d15"), Color("3a2619"), Color(spec.defy, 0.8), Color(spec.obey, 0.6), Color("0c0907")]
-	for i in 520:
+	for i in 900:
 		var a := rng.randf() * TAU
 		var r := R * 1.3 * sqrt(rng.randf())
 		var pos := c + Vector2.from_angle(a) * r
-		var ang := a + PI / 2.0 + (rng.randf() - 0.5) * 1.1
-		var len_ := R * (0.05 + rng.randf() * 0.12)
+		var ang := a + PI / 2.0 + (rng.randf() - 0.5) * 0.3 # g3 edit: follow the ring
+		var len_ := R * (0.025 + rng.randf() * 0.05)
 		var w := R * (0.012 + rng.randf() * 0.03)
 		var col: Color = tones[rng.randi() % tones.size()]
-		col.a = 0.10 + rng.randf() * 0.2
+		col.a = 0.35 + rng.randf() * 0.3 # g3 edit: denser, more opaque
 		var d := Vector2.from_angle(ang) * len_ * 0.5
 		draw_line(pos - d, pos + d, col, w)
 
