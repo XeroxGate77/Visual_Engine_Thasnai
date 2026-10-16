@@ -10,3 +10,6 @@ deploy/
 *.key
 *_private*.pem
 .env*
+
+# private working notes: never publish
+PROJECT-MAP.md
